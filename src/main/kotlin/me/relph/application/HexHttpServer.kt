@@ -1,6 +1,6 @@
 package me.relph.application
 
-import me.relph.domain.port.service.Hub
+import me.relph.domain.port.Hub
 import org.http4k.core.HttpHandler
 import org.http4k.server.Http4kServer
 import org.http4k.server.Jetty

@@ -3,7 +3,7 @@ package me.relph.adapters.http
 import dev.forkhandles.result4k.get
 import dev.forkhandles.result4k.map
 import dev.forkhandles.result4k.mapFailure
-import me.relph.domain.port.service.Hub
+import me.relph.domain.port.Hub
 import org.http4k.core.Method
 import org.http4k.core.Request
 import org.http4k.core.Response
