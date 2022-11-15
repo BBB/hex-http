@@ -1,7 +1,8 @@
-package me.relph.domain.port
+package me.relph.domain.adapter
 
 import dev.forkhandles.result4k.Failure
 import dev.forkhandles.result4k.Success
+import me.relph.domain.port.User
 import me.relph.domain.port.UserStorageFailure.NotFound
 import org.junit.jupiter.api.Test
 import strikt.api.expectThat

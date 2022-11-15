@@ -1,7 +1,10 @@
-package me.relph.domain.port
+package me.relph.domain.adapter
 
 import dev.forkhandles.result4k.Result4k
 import dev.forkhandles.result4k.asResultOr
+import me.relph.domain.port.User
+import me.relph.domain.port.UserId
+import me.relph.domain.port.UserStorage
 import me.relph.domain.port.UserStorageFailure.NotFound
 
 class InMemoryUserStorage(private val users: Map<UserId, User> = mapOf()) : UserStorage {
