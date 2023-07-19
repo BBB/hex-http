@@ -9,7 +9,7 @@ import strikt.assertions.isEqualTo
 
 internal class HubImplTest {
 
-    private val hub = HubImpl(InMemoryUserStorage())
+    private val hub = Hub(InMemoryUserStorage())
 
     @Test
     fun `can ping`() {
