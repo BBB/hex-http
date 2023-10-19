@@ -17,9 +17,9 @@ dependencies {
     testImplementation("io.strikt:strikt-core:0.34.1")
     implementation(platform("dev.forkhandles:forkhandles-bom:2.3.0.0"))
     implementation("dev.forkhandles:result4k")
-    implementation(group = "org.http4k", name = "http4k-core", version = "4.33.2.1")
-    implementation(group = "org.http4k", name = "http4k-server-jetty", version = "4.33.2.1")
-    implementation(group = "org.http4k", name = "http4k-client-okhttp", version = "4.33.2.1")
+    implementation(group = "org.http4k", name = "http4k-core", version = "5.8.5.0")
+    implementation(group = "org.http4k", name = "http4k-server-jetty", version = "5.8.5.0")
+    implementation(group = "org.http4k", name = "http4k-client-okhttp", version = "5.8.5.0")
 }
 
 tasks.test {
