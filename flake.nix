@@ -12,8 +12,9 @@
       devShells.default = pkgs.mkShell rec {
         packages = with pkgs; [
           direnv
+          gradle
           git
-          fork.temurin-bin-21
+          fork.temurin-bin-20
         ];
       };
     });
