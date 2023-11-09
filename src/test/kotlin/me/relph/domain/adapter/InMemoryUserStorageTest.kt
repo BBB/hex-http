@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test
 private val roger = User("Roger")
 
 internal class InMemoryUserStorageTest {
-    val storage = InMemoryUserStorage(mapOf(UserId.of("1") to roger))
+    private val storage = InMemoryUserStorage(mapOf(UserId.of("1") to roger))
 
     @Test
     fun `can get a user by id`() {
@@ -20,5 +20,9 @@ internal class InMemoryUserStorageTest {
     @Test
     fun `can not get a user by id`() {
         storage.byId(UserId.of("2")) shouldBeFailure NotFound(UserId.of("2"))
+    }
+    @Test
+    fun `can get all users`() {
+        storage.all() shouldBeSuccess  listOf(roger)
     }
 }

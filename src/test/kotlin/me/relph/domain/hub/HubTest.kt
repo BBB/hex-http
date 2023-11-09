@@ -19,4 +19,8 @@ internal class HubTest {
     fun `can greet an unknown user`() {
         hub.greet(UserId.of("xxx")) shouldBeSuccess "hello anon"
     }
+    @Test
+    fun `can list`() {
+        hub.list() shouldBeSuccess listOf()
+    }
 }
