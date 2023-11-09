@@ -12,4 +12,5 @@ sealed class UserStorageFailure(val message: String) {
 
 interface UserStorage {
     fun byId(id: UserId): Result4k<User, UserStorageFailure>
+    fun all(): Result4k<List<User>, UserStorageFailure>
 }

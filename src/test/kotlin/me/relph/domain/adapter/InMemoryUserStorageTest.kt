@@ -1,12 +1,10 @@
 package me.relph.domain.adapter
 
-import dev.forkhandles.result4k.Failure
-import dev.forkhandles.result4k.Success
+import dev.mrbergin.kotest.result4k.shouldBeFailure
+import dev.mrbergin.kotest.result4k.shouldBeSuccess
 import me.relph.domain.port.User
 import me.relph.domain.port.UserStorageFailure.NotFound
 import org.junit.jupiter.api.Test
-import strikt.api.expectThat
-import strikt.assertions.isEqualTo
 
 private val roger = User("Roger")
 
@@ -15,11 +13,11 @@ internal class InMemoryUserStorageTest {
 
     @Test
     fun `can get a user by id`() {
-        expectThat(storage.byId("1")).isEqualTo(Success(roger))
+        storage.byId("1") shouldBeSuccess roger
     }
 
     @Test
     fun `can not get a user by id`() {
-        expectThat(storage.byId("2")).isEqualTo(Failure(NotFound("2")))
+        storage.byId("2") shouldBeFailure NotFound("2")
     }
 }
