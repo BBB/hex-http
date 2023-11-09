@@ -11,9 +11,6 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-    testImplementation("io.strikt:strikt-core:0.34.1")
-    testImplementation("io.kotest:kotest-assertions-core:5.8.0")
     implementation(platform("dev.forkhandles:forkhandles-bom:2.3.0.0"))
     implementation(group = "dev.forkhandles", name = "result4k")
     implementation(group = "dev.forkhandles", name = "values4k")
@@ -22,6 +19,10 @@ dependencies {
     implementation(group = "org.http4k", name = "http4k-server-jetty")
     implementation(group = "org.http4k", name = "http4k-client-okhttp")
     implementation(group = "org.http4k", name = "http4k-format-jackson")
+
+    testImplementation(kotlin("test"))
+    testImplementation("io.strikt:strikt-core:0.34.1")
+    testImplementation("io.kotest:kotest-assertions-core:5.8.0")
     testImplementation(group = "org.http4k", name = "http4k-testing-kotest")
     testImplementation(group = "dev.mrbergin", name = "result4k-kotest-matchers", version = "2022.10.2")
 }
