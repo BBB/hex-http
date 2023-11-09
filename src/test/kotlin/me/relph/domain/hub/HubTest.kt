@@ -3,6 +3,7 @@ package me.relph.domain.hub
 
 import dev.mrbergin.kotest.result4k.shouldBeSuccess
 import me.relph.domain.adapter.InMemoryUserStorage
+import me.relph.domain.port.UserId
 import org.junit.jupiter.api.Test
 
 internal class HubTest {
@@ -16,6 +17,6 @@ internal class HubTest {
 
     @Test
     fun `can greet an unknown user`() {
-        hub.greet("xxx") shouldBeSuccess "hello anon"
+        hub.greet(UserId.of("xxx")) shouldBeSuccess "hello anon"
     }
 }

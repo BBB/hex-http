@@ -4,6 +4,7 @@ import me.relph.application.HexHttpApp
 import me.relph.domain.adapter.InMemoryUserStorage
 import me.relph.domain.hub.Hub
 import me.relph.domain.port.User
+import me.relph.domain.port.UserId
 import org.http4k.core.Method
 import org.http4k.core.Request
 import org.http4k.core.Status
@@ -23,9 +24,9 @@ internal class GreetTest {
 
     @Test
     fun `greets the user when they exist`() {
-        val hub = Hub(InMemoryUserStorage(mapOf("roger" to User("Roger"))))
+        val hub = Hub(InMemoryUserStorage(mapOf(UserId.of("1") to User("Roger"))))
         val app = HexHttpApp(hub)
-        val response = app(Request(Method.GET, "/greet/roger"))
+        val response = app(Request(Method.GET, "/greet/1"))
         response shouldHaveStatus Status.OK
         response shouldHaveBody "hello Roger"
     }

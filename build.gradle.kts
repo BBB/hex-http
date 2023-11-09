@@ -16,6 +16,7 @@ dependencies {
     testImplementation("io.kotest:kotest-assertions-core:5.8.0")
     implementation(platform("dev.forkhandles:forkhandles-bom:2.3.0.0"))
     implementation(group = "dev.forkhandles", name = "result4k")
+    implementation(group = "dev.forkhandles", name = "values4k")
     implementation(platform("org.http4k:http4k-bom:5.10.2.0"))
     implementation(group = "org.http4k", name = "http4k-core")
     implementation(group = "org.http4k", name = "http4k-server-jetty")

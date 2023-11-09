@@ -5,6 +5,7 @@ import me.relph.application.HexHttpApp
 import me.relph.domain.adapter.InMemoryUserStorage
 import me.relph.domain.hub.Hub
 import me.relph.domain.port.User
+import me.relph.domain.port.UserId
 import org.http4k.core.Method
 import org.http4k.core.Request
 import org.http4k.kotest.shouldHaveBody
@@ -21,7 +22,7 @@ internal class ListUsersTest {
 
     @Test
     fun `can list all users (some)`() {
-        val hub = Hub(InMemoryUserStorage(mapOf("1" to User("roger"))))
+        val hub = Hub(InMemoryUserStorage(mapOf(UserId.of("1") to User("roger"))))
         val app = HexHttpApp(hub)
         val response = app(Request(Method.GET, "/users"))
         response.shouldHaveBody(usersLens, be(listOf(User("roger"))))
