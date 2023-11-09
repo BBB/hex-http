@@ -13,6 +13,7 @@ import org.http4k.routing.path
 
 fun greet(hub: Hub) = "/greet/{name}" bind Method.GET to { req: Request ->
     val name: String? = req.path("name")
-    hub.greet(name ?: "anon").map { Response(Status.OK).body(it) }.mapFailure { Response(Status.INTERNAL_SERVER_ERROR) }.get()
+    hub.greet(name ?: "anon").map { Response(Status.OK).body(it) }.mapFailure { Response(Status.INTERNAL_SERVER_ERROR) }
+        .get()
 }
 

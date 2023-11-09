@@ -11,7 +11,7 @@ import strikt.assertions.isEqualTo
 private val roger = User("Roger")
 
 internal class InMemoryUserStorageTest {
- val storage = InMemoryUserStorage(mapOf("1" to roger))
+    val storage = InMemoryUserStorage(mapOf("1" to roger))
 
     @Test
     fun `can get a user by id`() {
