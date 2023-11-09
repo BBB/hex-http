@@ -20,32 +20,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1697688401,
-        "narHash": "sha256-61QlajY7R9PbK25uFl55zh968CVNspwXX1zzimic4Uo=",
+        "lastModified": 1699099776,
+        "narHash": "sha256-X09iKJ27mGsGambGfkKzqvw5esP1L/Rf8H3u3fCqIiU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "458ef9126aa380996d77d44f53f886c2d8485f53",
+        "rev": "85f1ba3e51676fa8cc604a3d863d729026a6b8eb",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-temurin-21": {
-      "locked": {
-        "lastModified": 1697127221,
-        "narHash": "sha256-TvYCpMIT0p3cxOine9h8eondV+BEZ8fPXKD4yjh71TI=",
-        "owner": "Infinidoge",
-        "repo": "nixpkgs",
-        "rev": "387bcbb67966c0f3f5394dae05f973226a8e7c16",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Infinidoge",
-        "ref": "feat/temurin-bin-21",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -53,8 +37,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
-        "nixpkgs-temurin-21": "nixpkgs-temurin-21"
+        "nixpkgs": "nixpkgs"
       }
     },
     "systems": {

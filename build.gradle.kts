@@ -1,9 +1,5 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_20
-import org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_1_9
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    kotlin("jvm") version "1.9.10"
+    kotlin("jvm") version "1.9.20"
     application
 }
 
@@ -34,15 +30,6 @@ tasks.wrapper {
   gradleVersion = "8.4"
   distributionSha256Sum = "f2b9ed0faf8472cbe469255ae6c86eddb77076c75191741b4a462f33128dd419"
   distributionType = Wrapper.DistributionType.ALL
-}
-
-
-tasks.withType<KotlinCompile>().configureEach {
-  compilerOptions {
-    jvmTarget.set(JVM_20)
-    apiVersion.set(KOTLIN_1_9)
-    languageVersion.set(KOTLIN_1_9)
-  }
 }
 
 application {
