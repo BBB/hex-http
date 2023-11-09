@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 import strikt.api.expectThat
 import strikt.assertions.isEqualTo
 
-internal class HubImplTest {
+internal class HubTest {
 
     private val hub = Hub(InMemoryUserStorage())
 
