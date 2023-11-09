@@ -20,11 +20,18 @@ dependencies {
     implementation(group = "org.http4k", name = "http4k-client-okhttp")
     implementation(group = "org.http4k", name = "http4k-format-jackson")
 
+    implementation(platform("org.jetbrains.exposed:exposed-bom:0.44.1"))
+    implementation(group = "org.jetbrains.exposed", name = "exposed-core")
+    implementation(group = "org.jetbrains.exposed", name = "exposed-jdbc")
+    implementation(group = "org.jetbrains.exposed", name = "exposed-java-time")
+    implementation(group = "org.postgresql", name = "postgresql", version = "42.6.0")
+
     testImplementation(kotlin("test"))
     testImplementation("io.strikt:strikt-core:0.34.1")
     testImplementation("io.kotest:kotest-assertions-core:5.8.0")
     testImplementation(group = "org.http4k", name = "http4k-testing-kotest")
     testImplementation(group = "dev.mrbergin", name = "result4k-kotest-matchers", version = "2022.10.2")
+    testImplementation(group = "com.h2database",name = "h2", version = "2.2.224")
 }
 
 tasks.test {

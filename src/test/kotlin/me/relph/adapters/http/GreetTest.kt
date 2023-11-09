@@ -19,12 +19,12 @@ internal class GreetTest {
         val app = HexHttpApp(hub)
         val response = app(Request(Method.GET, "/greet/roger"))
         response shouldHaveStatus Status.OK
-        response shouldHaveBody "hello anon x"
+        response shouldHaveBody "hello anon"
     }
 
     @Test
     fun `greets the user when they exist`() {
-        val hub = Hub(InMemoryUserStorage(mapOf(UserId.of("1") to User("Roger"))))
+        val hub = Hub(InMemoryUserStorage(mutableMapOf(UserId.of("1") to User(UserId.of("1"), "Roger"))))
         val app = HexHttpApp(hub)
         val response = app(Request(Method.GET, "/greet/1"))
         response shouldHaveStatus Status.OK

@@ -22,9 +22,9 @@ internal class ListUsersTest {
 
     @Test
     fun `can list all users (some)`() {
-        val hub = Hub(InMemoryUserStorage(mapOf(UserId.of("1") to User("roger"))))
+        val hub = Hub(InMemoryUserStorage(mutableMapOf(UserId.of("1") to User(UserId.of("1"), "roger"))))
         val app = HexHttpApp(hub)
         val response = app(Request(Method.GET, "/users"))
-        response.shouldHaveBody(usersLens, be(listOf(User("roger"))))
+        response.shouldHaveBody(usersLens, be(listOf(User(UserId.of("1"), "roger"))))
     }
 }
